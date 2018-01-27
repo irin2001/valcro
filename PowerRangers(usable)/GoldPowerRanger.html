@@ -3,12 +3,98 @@
 <head>
 <style>
 
+.top-right {
+    position: absolute;
+    top: 14px;
+    right: 30px;
+    font-size: 30px;
+    position: fixed;
+}
+#toobig {
+	left: 30px;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    height: 8%;
+    position: fixed;
+}
+/* menu buttons */
+.dropbtn {
+	background:rgba(0,0,0,0.5);
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    font-family: 'Fjalla One', sans-serif;
+    min-width:120px;
+    border-radius: 6px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.dropdown-content a:hover {background-color: #dbdbdb}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 
 </style>
 </head>
 <body>
 <img src="https://vignette.wikia.nocookie.net/powerrangers/images/b/b3/Prz-gold.png/revision/latest?cb=20140122025605">
+
+<img id="toobig" src="https://vignette.wikia.nocookie.net/logopedia/images/0/06/MMPR_Logo.png/revision/latest?cb=20140301211300" />
+      <div class="top-right">
+      	<div class="dropdown">
+          <button class="dropbtn">History</button>
+          <div class="dropdown-content">
+              <a href="history\early.html">Early</a>
+              <a href="history\late.html">Mid</a>
+              <a href="history\mid.html">Late</a>
+          </div>
+        </div>
+      	<div class="dropdown">
+          <button class="dropbtn">Rangers</button>
+          <div class="dropdown-content">
+            <a href="PowerRangers(usable)\RedPowerRanger.html">Red</a>
+            <a href="PowerRangers(usable)\BluePowerRanger.html">Blue</a>
+            <a href="PowerRangers(usable)\YellowPowerRanger.html">Yellow</a>
+            <a href="PowerRangers(usable)\GoldPowerRanger.html">Gold</a>
+            <a href="PowerRangers(usable)\PinkPowerRanger.html">Pink</a>
+            <a href="PowerRangers(usable)\BlackPowerRanger.html">Black</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">About</button>
+          <div class="dropdown-content">
+            <a href="about\sources.html">Sources</a>
+            <a href="about\creators.html">Creators</a>
+          </div>
+      	</div>
+      </div>
+
 
 </body>
 </html>
