@@ -12,11 +12,19 @@
 }
 #toobig {
 	left: 30px;
-    position: absolute;
     top: 2%;
     left: 1%;
     height: 8%;
     position: fixed;
+}
+#vis {
+    height: 400px;
+    width: 600px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    padding: 20px;
 }
 /* menu buttons */
 .dropbtn {
@@ -58,12 +66,16 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+.about {
+  background-color: #041b26;
+  color: #821324;
+  padding: 10px;
+}
 
 </style>
 </head>
 <body>
-<img src="https://vignette.wikia.nocookie.net/powerrangers/images/6/69/Black_Meower.jpeg/revision/latest/scale-to-width-down/91?cb=20170510141016">
+<img id="vis" src="https://vignette.wikia.nocookie.net/powerrangers/images/6/69/Black_Meower.jpeg/revision/latest/scale-to-width-down/91?cb=20170510141016">
 
 <a href="index.html"><img id="toobig" src="https://vignette.wikia.nocookie.net/logopedia/images/0/06/MMPR_Logo.png/revision/latest?cb=20140301211300" /></a>
       <div class="top-right">
@@ -94,11 +106,11 @@
           </div>
       	</div>
       </div>
-  <p></br></br>The Black Power Ranger is given to many powerful characters in the</br>
+  <div class="about"><p></br></br>The Black Power Ranger is given to many powerful characters in the</br>
   series. They are skilled and very powerful. When they are not in the show, they</br>
   are replaced with a Green Ranger. There has never been a female Black Power Ranger.</br>
   Not much is explained about the Black Ranger yet in the series but as they are</br>
-  mysterious, they are powerful.</p>
+  mysterious, they are powerful.</p></div>
       <ul><p>The list of the Black Ranger characters include</p>
         <li>Zack Taylor</li>
         <li>Adam Park</li>
