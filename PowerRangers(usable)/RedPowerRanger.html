@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
 <style>
 
 .top-right {
@@ -11,12 +13,15 @@
     position: fixed;
 }
 #toobig {
-    left: 30px;
-    position: absolute;
+	left: 30px;
     top: 2%;
     left: 1%;
     height: 8%;
     position: fixed;
+}
+#vis {
+  height: 800px;
+  width: 100%;
 }
 /* menu buttons */
 .dropbtn {
@@ -58,13 +63,40 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+.about {
+  background-color: #041b26;
+  color: #a0293b;
+  padding: 10px;
+  font-size: 40px;
+  padding-top: 30px;
+  max-height: 300px;
+  min-height: 300px;
+  text-align: left;
+  padding-right: 200px;
+}
+.lies {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  background-color: #775660;
+  color: white;
+  padding: 15px;
+}
+.items {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+   list-style-type: none;
+   padding: 20px;
+   background-color: #a87987;
+   color: white;
+}
+li {
+  padding: 10px;
+}
 
 </style>
 </head>
 <body>
-<h1 class="bodyfont"></br></br>THE RED RANGER</h1>
-<img src="https://vignette.wikia.nocookie.net/powerrangers/images/1/13/Mmpr-red.png/revision/latest?cb=20130726024302">
 
 <a href="index.html"><img id="toobig" src="https://vignette.wikia.nocookie.net/logopedia/images/0/06/MMPR_Logo.png/revision/latest?cb=20140301211300" /></a>
       <div class="top-right">
@@ -95,14 +127,16 @@
           </div>
       	</div>
       </div>
-    <p>The Red Ranger is never to be messed with. He is usually the leader of</br>
+  <div class="about"><p>The Red Ranger is never to be messed with. He is usually the leader of</br>
     the Power Rangers. He is the "Head Honco", "Large and in Charge" He tells</br>
     the other Rangers what to do and they do it. He is strong and viginant but</br>
     has a shorter patience than the rest of the Rangers. In the Television show</br>
     Red Power Rangers are either the leader or a hot-headed rookie that was</br>
     recruited. They are always given a strong (sometimes the strongest) weapons </br>
-    of all the Rangers.</p>
-      <ul><p>The list of the Red Ranger characters include</p>
+    of all the Rangers.</p></div>
+  <img id="vis" src="https://vignette.wikia.nocookie.net/powerrangers/images/1/13/Mmpr-red.png/revision/latest?cb=20130726024302">
+      <div class="lies"><ul><p>The list of the Red Ranger characters include</p></div>
+      <div class="items">
         <li>Jason Lee Scott</li>
         <li>Rocky DeSantos</li>
         <li>Leo Corbett</li>
@@ -112,8 +146,8 @@
         <li>Troy Burrows</li>
         <li>Brody Romero</li>
         <li>Mack Hartford</li>
+      </div>
       </ul>
-
 
 </body>
 </html>
