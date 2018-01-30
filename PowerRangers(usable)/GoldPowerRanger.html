@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
 <style>
 
 .top-right {
@@ -12,11 +14,14 @@
 }
 #toobig {
 	left: 30px;
-    position: absolute;
     top: 2%;
     left: 1%;
     height: 8%;
     position: fixed;
+}
+#vis {
+  height: 800px;
+  width: 100%;
 }
 /* menu buttons */
 .dropbtn {
@@ -58,12 +63,40 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+.about {
+  background-color: #041b26;
+  color: #a0293b;
+  padding: 10px;
+  font-size: 40px;
+  padding-top: 30px;
+  max-height: 300px;
+  min-height: 300px;
+  text-align: left;
+  padding-right: 200px;
+}
+.lies {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  background-color: #775660;
+  color: white;
+  padding: 15px;
+}
+.items {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+   list-style-type: none;
+   padding: 20px;
+   background-color: #a87987;
+   color: white;
+}
+li {
+  padding: 10px;
+}
 
 </style>
 </head>
 <body>
-<img src="https://vignette.wikia.nocookie.net/powerrangers/images/b/b3/Prz-gold.png/revision/latest?cb=20140122025605">
 
 <a href="index.html"><img id="toobig" src="https://vignette.wikia.nocookie.net/logopedia/images/0/06/MMPR_Logo.png/revision/latest?cb=20140301211300" /></a>
       <div class="top-right">
@@ -94,19 +127,22 @@
           </div>
       	</div>
       </div>
-      <p></br></br>The Gold Power Ranger is a very powerful fighter and thinker.</br>
+  <div class="about"><p>The Gold Power Ranger is a very powerful fighter and thinker.</br>
       He is always added to the show later in the season to help overcome a </br>
       a challenge the other Rangers are having trouble with. The original Gold</br>
       Rangers name was Trey of Triforia. He had three personalities: Wisdom, Heart,</br>
       and Courage which were ultimatly portrayed by identical triplets Tom, Tim,</br>
-      and Ted DiFillippo. </p>
-        <ul><p>The list of the Gold Ranger cast include</p>
+      and Ted DiFillippo. </p></div>
+  <img id="vis" src="https://vignette.wikia.nocookie.net/powerrangers/images/b/b3/Prz-gold.png/revision/latest?cb=20140122025605">
+      <div class="lies"><ul><p>The list of the Gold Ranger characters include</p></div>
+      <div class="items">
           <li>Ted DiFilippo</li>
           <li>Tom DiFilippo</li>
           <li>Tim DiFilippo</li>
           <li>Austin St. John</li>
           <li>Paul F. Rosenthal (voice)</li>
-        </ul>
+      </div>
+      </ul>
 
 </body>
 </html>
