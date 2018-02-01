@@ -4,150 +4,74 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
 <style>
-
-.top-right {
-    position: absolute;
-    top: 14px;
-    right: 30px;
-    font-size: 30px;
-    position: fixed;
+html {
+overflow: hidden;
+touch-action: none;
+content-zooming: none;
 }
-#toobig {
-	left: 30px;
-    top: 2%;
-    left: 1%;
-    height: 8%;
-    position: fixed;
+body {
+margin:0;
+padding:0;
+background:#000;
+position:absolute;
+width:100%;
+height:100%;
 }
-#vis {
-  height: 800px;
-  width: 100%;
+#screen {
+position:absolute;
+width:100%;
+height:100%;
 }
-/* menu buttons */
-.dropbtn {
-	background:rgba(0,0,0,0.5);
-    color: white;
-    padding: 16px;
-    font-size: 20px;
-    border: none;
-    font-family: 'Fjalla One', sans-serif;
-    min-width:120px;
-    border-radius: 6px;
+#screen .img{
+position:absolute;
+cursor:pointer;
+width:100%;
+height:100%;
+user-select: none;
 }
-
-.dropdown {
-    position: relative;
-    display: inline-block;
+#screen .frame {
+position:absolute;
+width:50%;
+height:50%;
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 6px;
+#images {
+display:none;
 }
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 15px;
-    border-radius: 6px;
-}
-
-.dropdown-content a:hover {background-color: #dbdbdb}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.about {
-  background-color: #041b26;
-  color: #a0293b;
-  padding: 10px;
-  font-size: 40px;
-  padding-top: 30px;
-  max-height: 300px;
-  min-height: 300px;
-  text-align: left;
-  padding-right: 200px;
-}
-.lies {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
-  background-color: #775660;
-  color: white;
-  padding: 15px;
-}
-.items {
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-   list-style-type: none;
-   padding: 20px;
-   background-color: #a87987;
-   color: white;
-}
-li {
-  padding: 10px;
-}
-
 </style>
 </head>
 <body>
+  <div id="screen"></div>
+<div id="images">
+	<img src="https://vignette.wikia.nocookie.net/powerrangers/images/1/13/Mmpr-red.png/revision/latest?cb=20130726024302">
 
-<a href="index.html"><img id="toobig" src="https://vignette.wikia.nocookie.net/logopedia/images/0/06/MMPR_Logo.png/revision/latest?cb=20140301211300" /></a>
-      <div class="top-right">
-      	<div class="dropdown">
-          <button class="dropbtn">History</button>
-          <div class="dropdown-content">
-              <a href="early.html">Early</a>
-              <a href="late.html">Mid</a>
-              <a href="mid.html">Late</a>
-          </div>
-        </div>
-      	<div class="dropdown">
-          <button class="dropbtn">Rangers</button>
-          <div class="dropdown-content">
-            <a href="RedPowerRanger.html">Red</a>
-            <a href="BluePowerRanger.html">Blue</a>
-            <a href="YellowPowerRanger.html">Yellow</a>
-            <a href="GoldPowerRanger.html">Gold</a>
-            <a href="PinkPowerRanger.html">Pink</a>
-            <a href="BlackPowerRanger.html">Black</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">About</button>
-          <div class="dropdown-content">
-            <a href="sources.html">Sources</a>
-            <a href="creators.html">Creators</a>
-          </div>
-      	</div>
-      </div>
-  <div class="about"><p>The Red Ranger is never to be messed with. He is usually the leader of</br>
-    the Power Rangers. He is the "Head Honco", "Large and in Charge" He tells</br>
-    the other Rangers what to do and they do it. He is strong and viginant but</br>
-    has a shorter patience than the rest of the Rangers. In the Television show</br>
-    Red Power Rangers are either the leader or a hot-headed rookie that was</br>
-    recruited. They are always given a strong (sometimes the strongest) weapons </br>
-    of all the Rangers.</p></div>
-  <img id="vis" src="https://vignette.wikia.nocookie.net/powerrangers/images/1/13/Mmpr-red.png/revision/latest?cb=20130726024302">
-      <div class="lies"><ul><p>The list of the Red Ranger characters include</p></div>
-      <div class="items">
-        <li>Jason Lee Scott</li>
-        <li>Rocky DeSantos</li>
-        <li>Leo Corbett</li>
-        <li>Carter Grayson</li>
-        <li>Wesley Collins</li>
-        <li>Cole Evans</li>
-        <li>Troy Burrows</li>
-        <li>Brody Romero</li>
-        <li>Mack Hartford</li>
-      </div>
-      </ul>
-
+  <script>
+      window.addEventListener('load', function () {
+    var src = document.getElementById("images").getElementsByTagName("img"),
+    img = function img (el,x,y) {
+      var d = document.createElement("div");
+      d.className     = "frame";
+      d.style.left    = 50 * x + "%";
+      d.style.top     = 50 * y + "%";
+      var img         = document.createElement("img");
+      img.className   = "img";
+      img.src         = src[Math.floor(Math.random()*src.length)].src;
+      img.onmousedown = function () {
+        div(this.parentNode);
+        this.parentNode.removeChild(this);
+      }
+      d.appendChild(img);
+      el.appendChild(d);
+    },
+    div = function div (el) {
+      img(el,0,0);
+      img(el,1,0);
+      img(el,0,1);
+      img(el,1,1);
+    };
+    div(document.getElementById("screen"));
+    window.ondragstart = function() { return false; }
+    }, false);
+  </script>
+</div>
 </body>
 </html>
